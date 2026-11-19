@@ -42,15 +42,3 @@ selected_frames = [frames[i] for i in indices.tolist()]
 ```
 
 The QA backbone receives the selected frames in chronological order with the original question and options. For cached scores, call `select_frames` directly with one probability per original candidate. Removing low-scoring rows before calling it changes distances in Equation 1.
-
-## Implementation map
-
-| Paper | File |
-|---|---|
-| §III-B, Fig. 2 — routing, constrained synthesis, one correction | [src/reformulation.py](src/reformulation.py) |
-| §III-C, Eq. 1 — histogram cut, greedy temporal selection and composition | [src/model.py](src/model.py) |
-| §IV-A — Qwen and BLIP inference | [src/backends.py](src/backends.py) |
-| Table 2 — dataset parameters and model budgets | [configs/base.yaml](configs/base.yaml) |
-| Unpublished details and local choices | [REPRODUCTION_NOTES.md](REPRODUCTION_NOTES.md) |
-
-Sungjin Han, Thang Vu and Junyeong Kim. “Speaking ITM’s Language: Query Reformulation and Temporal-MMR for Long-Video QA.” IEEE Access 14, 2026. [Paper](https://doi.org/10.1109/ACCESS.2026.3725764)

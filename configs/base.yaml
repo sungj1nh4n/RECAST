@@ -1,0 +1,11 @@
+# Table 2. Each pair is [lambda, sigma in candidate-frame positions].
+benchmarks:
+  LongVideoBench: [0.3, 5]
+  Video-MME: [0.6, 10]
+  MLVU: [0.4, 3]
+# Table 2. Final frame count per backbone.
+budgets:
+  Qwen2-VL-7B: 32
+  Qwen2.5-VL-7B: 32
+  LLaVA-OneVision-7B: 32
+  LLaVA-Video-7B: 64

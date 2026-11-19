@@ -1,0 +1,6 @@
+torch>=2.8
+transformers>=4.57,<5
+Pillow
+PyYAML
+nbformat
+ipykernel
